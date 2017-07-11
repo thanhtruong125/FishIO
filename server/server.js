@@ -4,7 +4,7 @@ var express = require('express'),
     sio = require('socket.io'),
     sio_redis = require('socket.io-redis');
 
-var port = 3002,
+var port = process.env.PORT || 3000,
     num_processes = 4;
 
 if (cluster.isMaster) {
@@ -103,7 +103,7 @@ var Boid = require('./Boid.js');
 var SAT = require('sat');
 var V = SAT.Vector;
 var C = SAT.Circle;
-var port = process.env.PORT || c.port;
+//var port = process.env.PORT || c.port;
 app.use(express.static(__dirname + '/../client'));
 
 var users = [];
