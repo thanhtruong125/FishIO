@@ -5,7 +5,7 @@ var express = require('express'),
     sio_redis = require('socket.io-redis');
 
 var port = process.env.PORT || 3002,
-    num_processes = require('os').cpus().length;
+    num_processes = 1;
 
 if (cluster.isMaster) {
     // This stores our workers. We need to keep them to be able to reference
