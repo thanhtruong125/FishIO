@@ -723,7 +723,7 @@ function moveObj(mass) {
 function balanceMass() {  
     var addItem = Math.min(c.food.maxFood - food.length, (bots.length + users.length)* 5);
     if (addItem > 0) {
-        console.log('[DEBUG] Adding ' + addItem + ' food to level!');
+        //console.log('[DEBUG] Adding ' + addItem + ' food to level!');
         addFood(addItem);
     }
     addItem = Math.min(c.itemBoom.maxItem - itemBoom.length, (bots.length + users.length)* 2);
