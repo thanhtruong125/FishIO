@@ -4,7 +4,7 @@ var express = require('express'),
     sio = require('socket.io'),
     sio_redis = require('socket.io-redis');
 
-var port = process.env.PORT || 3000,
+var port = process.env.PORT || 3002,
     num_processes = require('os').cpus().length;
 
 if (cluster.isMaster) {
